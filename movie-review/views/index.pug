@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include common/bootstrap.pug
+        script(src="js/index.js")
+    body
+        include common/header.pug 
+
+        div.container.p-5
+            h1.fw-bold.display-5 Trending Movies
+            .row
+                each movie in allMovies
+                    .col-md-3
+                        .card
+                            img.card-img-top(src=`https://via.placeholder.com/300x200`, alt=`Movie ${movie} Image`)
+                            .card-body.p-3
+                                h5.card-title Movie #{movie.name}
+                                p.card-text Description of Movie #{movie.description}.
+                                p.card-text Category: Action
+                                p.card-text Avg Rating: 4.5
+                                p.card-text Release Date: 2023-01-01
+                                button.btn.btn-primary Give Rating
+
+        
+        div.container.p-5
+            h1.fw-bold.display-5 All Movies

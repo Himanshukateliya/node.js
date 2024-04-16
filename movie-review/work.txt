@@ -1,0 +1,12 @@
+localhost:3000/api/users/->get all users
+
+localhost:3000/api/users/1->get specific user
+
+localhost:3000/api/users/->post - create new user
+
+localhost:3000/api/users/1->put - update user
+localhost:3000/api/users/1->patch - update user
+
+localhost:3000/api/users/1->delete- delete user
+
+
